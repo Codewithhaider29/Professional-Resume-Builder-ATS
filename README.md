@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+## 🚀 Welcome to your **Professional Resume Builder**
 
-## Project info
+**ATS-Optimized & Industry-Ready**
 
-**URL**: https://lovable.dev/projects/365cf740-ba86-4a7e-bc74-0252620debb1
+---
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+### ✏️ How to Edit Your Resume Builder
 
-**Use Lovable**
+You can customize and update the project using any of the following methods:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/365cf740-ba86-4a7e-bc74-0252620debb1) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+#### 💻 **Option 2: Use Your Local IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Work locally with full control:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Step 1: Clone the repository
+git clone <(https://github.com/Codewithhaider29/Professional-Resume-Builder-ATS.git)>
 
-Follow these steps:
+# Step 2: Go into the project directory
+cd <Professional-Resume-Builder-ATS>
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 3: Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### ✍️ **Option 3: Edit in GitHub**
 
-**Use GitHub Codespaces**
+* Open the repo on GitHub
+* Navigate to any file
+* Click the ✏️ edit icon
+* Make your changes and commit
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+#### 🌐 **Option 4: GitHub Codespaces**
 
-This project is built with:
+Launch a full dev environment in your browser:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* Click the **Code** button on GitHub
+* Select **Codespaces**
+* Create a new codespace and start editing
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/365cf740-ba86-4a7e-bc74-0252620debb1) and click on Share -> Publish.
+### 🛠️ Built With
 
-## Can I connect a custom domain to my Lovable project?
+Your Resume Builder is crafted using modern tools:
 
-Yes, you can!
+* ⚡ Vite
+* 🧠 TypeScript
+* ⚛️ React
+* 🎨 Tailwind CSS
+* 🧩 shadcn/ui
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 🌍 Deployment
+
+To publish your resume app:
+
+1. Open the project on [Vercel](https://professional-resume-builder-ats.vercel.app/)
+2. Click on **Share → Publish**
+3. Your professional resume will be instantly live
