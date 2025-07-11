@@ -39,11 +39,11 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Resume Builder specific tokens */
-    --form-background: 255 255 255;
-    --form-border: 226 232 240;
-    --preview-background: 255 255 255;
-    --preview-text: 15 23 42;
-    --section-border: 226 232 240;
+    --form-background: 0 0% 100%;
+    --form-border: 0 0% 88%;
+    --preview-background: 0 0% 100%;
+    --preview-text: 0 0% 0%;
+    --section-border: 0 0% 88%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
