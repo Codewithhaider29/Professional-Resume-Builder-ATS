@@ -75,16 +75,31 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
 				'form': 'var(--shadow-form)',
-				'preview': 'var(--shadow-preview)'
+				'preview': 'var(--shadow-preview)',
+				'elegant': 'var(--shadow-elegant)',
+				'hover': 'var(--shadow-hover)'
 			},
 			transitionProperty: {
 				'smooth': 'var(--transition-smooth)'
 			},
 			keyframes: {
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideUp: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				scaleIn: {
+					'0%': { opacity: '0', transform: 'scale(0.95)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -103,6 +118,9 @@ export default {
 				}
 			},
 			animation: {
+				'fade-in': 'fadeIn 0.6s ease-out',
+				'slide-up': 'slideUp 0.5s ease-out',
+				'scale-in': 'scaleIn 0.4s ease-out',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}

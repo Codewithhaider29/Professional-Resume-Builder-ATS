@@ -84,71 +84,82 @@ const ResumeBuilder: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Header */}
-      <header className="bg-gradient-primary text-white shadow-lg">
-        <div className="container mx-auto px-4 py-6">
+      <header className="bg-gradient-primary text-white shadow-elegant relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-card opacity-10"></div>
+        <div className="container mx-auto px-6 py-8 relative z-10">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <FileText className="h-8 w-8" />
-              <h1 className="text-2xl font-bold">ATS Resume Builder</h1>
+            <div className="flex items-center gap-4 animate-fade-in">
+              <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                <FileText className="h-8 w-8" />
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold">Professional Resume Builder</h1>
+                <p className="text-white/80 text-sm">ATS-Optimized & Industry-Ready</p>
+              </div>
             </div>
             <Button
               onClick={downloadPDF}
               disabled={!isFormValid()}
               variant="secondary"
               size="lg"
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-foreground hover:bg-white/90 shadow-elegant transition-smooth animate-scale-in font-semibold"
             >
               <Download className="h-5 w-5 mr-2" />
               Download PDF
             </Button>
           </div>
-          <p className="mt-2 text-blue-100">
-            Create a professional, ATS-friendly resume with live preview
-          </p>
         </div>
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
           {/* Form Section */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 shadow-form">
-              <h2 className="text-xl font-semibold text-primary mb-4">
-                Resume Information
-              </h2>
-              <p className="text-muted-foreground mb-6">
+          <div className="space-y-6 animate-slide-up">
+            <div className="bg-gradient-card rounded-xl p-8 shadow-elegant border border-white/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-2 h-8 bg-foreground rounded-full"></div>
+                <h2 className="text-2xl font-bold text-foreground">
+                  Resume Information
+                </h2>
+              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 Fill out the form below to create your professional resume. 
-                The preview will update automatically as you type.
+                Watch the preview update automatically as you type.
               </p>
             </div>
             
-            <div className="max-h-[calc(100vh-200px)] overflow-y-auto pr-2">
+            <div className="max-h-[calc(100vh-200px)] overflow-y-auto pr-2 space-y-4">
               <ResumeForm data={resumeData} onChange={setResumeData} />
             </div>
           </div>
 
           {/* Preview Section */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 shadow-form sticky top-4">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-semibold text-primary">
-                  Live Preview
-                </h2>
-                <div className="text-sm text-muted-foreground">
-                  ATS-Optimized Format
+          <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-gradient-card rounded-xl p-8 shadow-elegant border border-white/20 sticky top-4">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-8 bg-foreground rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-foreground">
+                    Live Preview
+                  </h2>
+                </div>
+                <div className="px-3 py-1 bg-accent text-accent-foreground rounded-full text-sm font-medium">
+                  ATS-Optimized
                 </div>
               </div>
               
-              <div className="border border-form-border rounded-lg overflow-hidden">
-                <div className="max-h-[calc(100vh-250px)] overflow-y-auto">
+              <div className="border border-muted rounded-xl overflow-hidden shadow-hover transition-smooth">
+                <div className="max-h-[calc(100vh-280px)] overflow-y-auto">
                   <ResumePreview data={resumeData} />
                 </div>
               </div>
               
-              <div className="mt-4 text-xs text-muted-foreground text-center">
-                📌 This preview uses ATS-friendly formatting: single column, 
-                semantic HTML, standard fonts, and no graphics.
+              <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+                <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                  ✨ This preview uses ATS-friendly formatting with single column layout, 
+                  semantic HTML structure, standard fonts, and clean typography for maximum compatibility.
+                </p>
               </div>
             </div>
           </div>
@@ -156,12 +167,14 @@ const ResumeBuilder: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-form-border mt-16">
-        <div className="container mx-auto px-4 py-6">
-          <div className="text-center text-sm text-muted-foreground">
-            <p>
-              ✨ ATS Resume Builder - Create professional resumes optimized for 
-              Applicant Tracking Systems
+      <footer className="bg-gradient-card border-t border-muted/20 mt-16">
+        <div className="container mx-auto px-6 py-8">
+          <div className="text-center">
+            <p className="text-muted-foreground font-medium">
+              ✨ Professional Resume Builder
+            </p>
+            <p className="text-sm text-muted-foreground/80 mt-2">
+              Create ATS-optimized resumes that get you noticed by employers
             </p>
           </div>
         </div>

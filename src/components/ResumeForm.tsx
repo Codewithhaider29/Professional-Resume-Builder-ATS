@@ -214,11 +214,14 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
   return (
     <div className="space-y-6">
       {/* Personal Information */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader>
-          <CardTitle className="text-primary">Personal Information</CardTitle>
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Personal Information
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6 pt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="fullName">Full Name *</Label>
@@ -289,28 +292,35 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
       </Card>
 
       {/* Professional Summary */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader>
-          <CardTitle className="text-primary">Professional Summary</CardTitle>
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Professional Summary
+          </CardTitle>
         </CardHeader>
-        <CardContent>
-          <Label htmlFor="summary">Summary (3-4 lines)</Label>
+        <CardContent className="pt-6">
+          <Label htmlFor="summary" className="text-base font-medium">Summary (3-4 lines)</Label>
           <Textarea
             id="summary"
             value={data.summary}
             onChange={(e) => updateSummary(e.target.value)}
             placeholder="A brief professional summary highlighting your key skills and experience..."
             rows={4}
+            className="mt-2"
           />
         </CardContent>
       </Card>
 
       {/* Skills */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader>
-          <CardTitle className="text-primary">Skills</CardTitle>
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Skills
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6 pt-6">
           <div className="flex gap-2">
             <Input
               value={skillInput}
@@ -342,15 +352,18 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
       </Card>
 
       {/* Work Experience */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-primary">Work Experience</CardTitle>
-          <Button onClick={addExperience} size="sm">
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4 flex flex-row items-center justify-between">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Work Experience
+          </CardTitle>
+          <Button onClick={addExperience} size="sm" className="bg-foreground text-background hover:bg-foreground/90">
             <Plus className="h-4 w-4 mr-2" />
             Add Experience
           </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-8 pt-6">
           {data.experience.map((exp, index) => (
             <div key={exp.id} className="space-y-4 border-b border-section-border pb-4 last:border-b-0">
               <div className="flex justify-between items-start">
@@ -412,15 +425,18 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
       </Card>
 
       {/* Education */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-primary">Education</CardTitle>
-          <Button onClick={addEducation} size="sm">
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4 flex flex-row items-center justify-between">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Education
+          </CardTitle>
+          <Button onClick={addEducation} size="sm" className="bg-foreground text-background hover:bg-foreground/90">
             <Plus className="h-4 w-4 mr-2" />
             Add Education
           </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-8 pt-6">
           {data.education.map((edu, index) => (
             <div key={edu.id} className="space-y-4 border-b border-section-border pb-4 last:border-b-0">
               <div className="flex justify-between items-start">
@@ -465,15 +481,18 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
       </Card>
 
       {/* Certifications */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-primary">Certifications</CardTitle>
-          <Button onClick={addCertification} size="sm">
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4 flex flex-row items-center justify-between">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Certifications
+          </CardTitle>
+          <Button onClick={addCertification} size="sm" className="bg-foreground text-background hover:bg-foreground/90">
             <Plus className="h-4 w-4 mr-2" />
             Add Certification
           </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-8 pt-6">
           {data.certifications.map((cert, index) => (
             <div key={cert.id} className="space-y-4 border-b border-section-border pb-4 last:border-b-0">
               <div className="flex justify-between items-start">
@@ -518,15 +537,18 @@ const ResumeForm: React.FC<ResumeFormProps> = ({ data, onChange }) => {
       </Card>
 
       {/* Projects */}
-      <Card className="bg-form-bg border-form-border shadow-form">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-primary">Projects</CardTitle>
-          <Button onClick={addProject} size="sm">
+      <Card className="bg-gradient-card border-white/20 shadow-elegant hover:shadow-hover transition-smooth">
+        <CardHeader className="border-b border-muted/20 pb-4 flex flex-row items-center justify-between">
+          <CardTitle className="text-foreground text-xl flex items-center gap-3">
+            <div className="w-1 h-6 bg-foreground rounded-full"></div>
+            Projects
+          </CardTitle>
+          <Button onClick={addProject} size="sm" className="bg-foreground text-background hover:bg-foreground/90">
             <Plus className="h-4 w-4 mr-2" />
             Add Project
           </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-8 pt-6">
           {data.projects.map((proj, index) => (
             <div key={proj.id} className="space-y-4 border-b border-section-border pb-4 last:border-b-0">
               <div className="flex justify-between items-start">
